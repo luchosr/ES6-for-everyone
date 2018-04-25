@@ -15,9 +15,13 @@
 
         const win = winners.map((winner, i) => ({
             name: winner,
-            race: race,
-            place: i
+            race,
+            place: i + 1
         }));
+
+        // using console.table() you can list objects in a table literally.
+
+        // if you use a redundant attribute like race:race, you can directly put one variable. "race".
     </script>
 </body>
 
