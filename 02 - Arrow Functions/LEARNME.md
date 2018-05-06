@@ -35,3 +35,13 @@ alert(\`hello ${name}\`);
 }**
 
 **sayMyName('Luciano');**
+
+## When _DO NOT USE_ arrow functions!
+
+* When you need the `this` keyword inside a non binded function.
+
+* When you need to bind a method to an object.
+
+* When you need to add a prototype method.
+
+* When you need arguments object.
