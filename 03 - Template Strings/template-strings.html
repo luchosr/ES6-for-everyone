@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const name = 'Falucho';
+        const age = 2;
+
+        // when you template a string, yo have to declare it inside backticks --> ``, and then
+        // you can put variables inside ${}.
+
+        const sentence = `My dog ${name} is ${age *7} years`;
+        console.log(sentence);
+
+        /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+        const person = {
+            name: 'Luciano',
+            job: 'Trying to be a web developer',
+            city: 'Buenos Aires',
+            bio: 'Luciano is a really rescilient person, he had a really difficult life and he is figthing for his dreams'
+        }
+
+        const markup =
+            `
+<div class="person">
+<h2>${person.name}</h2>
+<span class="job">${person.job}</span>
+<p class="location">${person.city}</p>
+<p class="bio">${person.bio}</p>
+</div>
+        `;
+
+        document.body.innerHTML = markup;
+    </script>
+
+
+</body>
+
+</html>

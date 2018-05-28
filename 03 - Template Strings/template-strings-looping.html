@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const dogs = [{
+                name: 'Falucho',
+                age: 2
+            },
+            {
+                name: 'Laika',
+                age: 5
+            },
+            {
+                name: 'Chicho',
+                age: 4
+            }
+        ];
+
+        const markup =
+            `
+<ul class="dogs">
+${dogs.map(dog => `<li>${dog.name} is ${dog.age * 7}</li>`).join('')}
+</ul> `;
+
+        document.body.innerHTML = markup;
+
+        console.log(markup);
+    </script>
+
+</body>
+
+</html>
