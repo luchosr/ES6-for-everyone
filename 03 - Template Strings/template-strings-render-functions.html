@@ -17,10 +17,20 @@
         }
 
 
-        const markup = `
+
+        function renderKeywords(keywords) {
+            return `
+    <ul>
+        ${keywords.map(keyword => `<li>${keyword}</li>`)}
+    </ul>
+            `;
+        }
+
+        const markup =
+            `
 <div class="beer">
-    <h2></h2>
-    <p></p>
+    <h2>${beer.name}</h2>
+    <p class="brewery"> ${beer.brewery}</p>
 </div>
         
         `
