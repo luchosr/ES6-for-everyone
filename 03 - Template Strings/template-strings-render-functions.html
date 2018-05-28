@@ -21,19 +21,23 @@
         function renderKeywords(keywords) {
             return `
     <ul>
-        ${keywords.map(keyword => `<li>${keyword}</li>`)}
+        ${keywords.map(keyword => `<li>${keyword}</li>`).join('')}
     </ul>
             `;
         }
+
+        console.log('cargo la fc')
 
         const markup =
             `
 <div class="beer">
     <h2>${beer.name}</h2>
-    <p class="brewery"> ${beer.brewery}</p>
-</div>
-        
-        `
+<p class="brewery"> ${beer.brewery}</p>
+    ${renderKeywords(beer.keywords)}
+</div>   
+        `;
+        document.body.innerHTML = markup;
+        console.log('paso el markup')
     </script>
 
 </body>
