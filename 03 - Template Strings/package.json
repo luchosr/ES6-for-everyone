@@ -1,0 +1,11 @@
+{
+    "name": "template-strings",
+    "version": "0.0.1",
+    "devDependencies": {
+        "babel-eslint": "^8.2.3",
+        "eslint": "^4.19.1",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-plugin-prettier": "^2.6.0",
+        "prettier": "^1.13.2"
+    }
+}
