@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const details = ['Luciano', 123, 'luchosr.com'];
+
+/* you can do this,
+    const name = details[0]
+    const id = details[1]
+    const web = details[2]
+
+    or make a destructuring
+  */ 
+ const [name, id, web] = details
+
+ console.log(name, id, web)
+
+ const data = 'Basketball,sports,90210,23'
+
+ const [itemname, category, sku, inventory] = data.split(',')
+
+ const team = ['Wes', 'Harry', 'Sarah','Keagan','Riker']
+
+ // Here we can assign the "Rest" operator(...) to relate the rest items of the array in players
+
+ const [captain, assistant, ...players] = team
+
+    console.log(captain, assistant)
+
+    console.log(`and the players are ${players}`)
+
+    </script>
+</body>
+</html>
