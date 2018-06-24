@@ -7,14 +7,62 @@
     <title>Document</title>
 </head>
 <body>
+    <p>hi i am p 01</p>
+    <p>hi i am p 02</p>
+    <p>hi i am p 03</p>
+    <p>hi i am p 04</p>
+    <p>hi i am p 05</p>
+    <p>hi i am p 06</p>
+    <p>hi i am p 07</p>
+    <p>hi i am p 08</p>
+    <p>hi i am p 09</p>
+    <p>hi i am p 10</p>
     <script>
     
     const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib'];
 
-    for (const cut of cuts){
-        console.log(cut);
-    }
+
+    // if you log cuts.entries() you will get an array iterator in the console.
+    //The entries() method returns an Array Iterator object with key/value pairs.
+    /*
+    [0, "Banana"]
+    [1, "Orange"]
+    [2, "Apple"]
+    [3, "Mango"]*/
+
+    for (const [i, cut] of cuts.entries()){
+        console.log(`${cut} is the ${i+1} item`);
+    };
     
+
+    // we can use for of iterator in arguments like in the example below, note that "arguments" are not an array, are an object prototype.
+
+
+    function addUpNumbers(){
+        let total = 0;
+        for (num of arguments){
+            total += num;
+        }
+        console.log(total);
+        return total;
+    };
+
+     addUpNumbers(10,23,52,67,52,34,22,78);
+
+
+    const name = "Lucho Ramello";
+
+    for (char of name){
+        console.log(char);
+    };
+    const ps = document.querySelectorAll('p');
+    console.log('ps');
+
+    for (const paragraph of ps){
+        paragraph.addEventListener('click', function(){
+            console.log(this.textContent);
+        });
+    };
     </script>
     
 </body>
