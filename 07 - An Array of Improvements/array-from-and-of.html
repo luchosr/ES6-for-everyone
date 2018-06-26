@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="people">
+        <p>Wes</p>
+        <p>Kait</p>
+        <p>Snickers</p>
+
+    </div>
+    <script>
+    const people = Array.from(document.querySelectorAll('.people p'));
+    
+    const names = people.map(person => person.textContent);
+
+
+    //Array.from() can take a second argument, a map function like:
+
+    /*
+    const peopleArray = Artray.from(people, person => {
+        console.log(person);
+        return 'lucho";
+        });
+        console.log(peopleArray);
+    */
+
+    // You have to always remember that argument are arrayish, but not an array. You can transform it using Array.of()
+
+
+        const ages = Array.of(25,23,39,84);
+
+    </script>
+</body>
+</html>
