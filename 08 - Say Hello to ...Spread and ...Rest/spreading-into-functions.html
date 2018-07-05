@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spreading into a function</title>
+</head>
+<body>
+    <script>
+            const inventors = ['Einstein', 'Newton', 'Galileo'];
+            const newInventors = ['Musk', 'Jobs'];
+
+            //si solo pusheo newInventors, me agrega un array dentro de otro.
+            // si hago el Spread, me agrega todos los Items al mismo nivel.
+
+            inventors.push(...newInventors);
+
+              console.log(inventors);
+
+              const name = ['Luciano', 'Ramello'];
+
+
+            function sayHi(first, last){
+                alert(`Hey ${first} ${last}, how are you??`);
+            }
+
+            // podemos llamar sayHi(name[0],name[1]); pero con spread lo hacemos mas facil
+
+            sayHi(...name);
+
+          
+        
+    </script>
+</body>
+</html>
