@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const first = 'snickers';
+    const last =  'bos';
+    const age = 2;
+    const breed = 'King Charles Cav';
+
+        // si los atributos se llaman igual a las constantes se puede directamente llamar de una sola vez a los atrivutos de los objetos.
+    const dog = {
+        first,
+        last,
+        age,
+        breed
+    }
+
+
+    console.log(dog);
+
+    // se pueden declarar funciones dentro de un objeto usando este shorthand.
+    
+    const modal = {
+        create(){
+
+        },
+        open(){
+
+        },
+        close:function(){
+
+        }
+    }
+    
+
+    const key = 'pocketColor';
+    const value = ':yellow';
+
+    const tShirt = {
+        [key]: value
+    };
+
+    console.log(tShirt);
+
+    const keys = ['size','color','weight'];
+    const values = ['medium', 'red', 100];
+
+    const shirt = {
+        [keys.shift()]:values.shift(),
+        [keys.shift()]:values.shift(),
+        [keys.shift()]:values.shift(),
+    }
+
+    console.log(shirt);
+
+
+
+    </script>
+</body>
+</html>
