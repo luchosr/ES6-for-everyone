@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promises!</title>
+</head>
+<body>
+    <script>
+    // una promesa es algo que va a suceder en algún momento futuro, pero no inmediatamente, siempre hay que tener en cuenta que javascript es particularmente asincrónico 
+
+
+    console.log('Going to fetch the latest posts from Wes\'blog');
+
+    const posts = fetch('https://wesbos.com/es6-for-everyone/');
+
+    console.log('Done!');
+    
+    console.log(posts);
+
+    
+    </script>
+</body>
+</html>
