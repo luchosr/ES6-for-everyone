@@ -8,18 +8,20 @@
 </head>
 <body>
     <script>
-    // una promesa es algo que va a suceder en algún momento futuro, pero no inmediatamente, siempre hay que tener en cuenta que javascript es particularmente asincrónico 
+    
+     // una promesa es algo que va a suceder en algún momento futuro, pero no inmediatamente, siempre hay que tener en cuenta que javascript es particularmente asincrónico 
 
 
     console.log('Going to fetch the latest posts from Wes\'blog');
+        const url = 'https://www.google.com.ar';
+    const postsPromise = fetch(url);
 
-    const posts = fetch('https://wesbos.com/es6-for-everyone/');
-
-    console.log('Done!');
-    
-    console.log(posts);
-
-    
+    postsPromise
+        .then(data => data.json())
+        .then(data => {console.log(data)})
+        .catch((err)=>{
+            console.error(err);
+        });
     </script>
 </body>
 </html>
