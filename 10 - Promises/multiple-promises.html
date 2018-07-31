@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multiple Promises</title>
+</head>
+
+<body>
+    <script>
+        // const weaher = new Promise((resolve) => {
+        //     setTimeout(() => {
+        //         resolve({temp:29, conditions:'Sunny with clouds'});
+        //     }, 2000);
+        // });
+
+        // const tweets = new Promise(((resolve =>{
+        //     setTimeout(() => {
+        //         resolve(['I like cake', 'BBQ is good too']);
+        //     }, 500);
+        // }))); 
+
+        // Promise
+        // .all([weaher,tweets])
+        // .then(responses => {
+        //     console.log(responses);
+        // });
+        const postPromise = fetch('https://jsonplaceholder.typicode.com/todos/1');
+        const streetCarsPromise = fetch('https://marketcheck-prod.apigee.net/v1/averages');
+    
+            Promise
+            .all([postPromise, streetCarsPromise])
+            .then(responses =>{
+                console.log(responses);
+                return Promise.all(responses.map(res => res.json()));
+            })
+            .then(responses => {
+                console.log(responses);
+            });
+    
+    
+    </script>
+</body>
+
+</html>
