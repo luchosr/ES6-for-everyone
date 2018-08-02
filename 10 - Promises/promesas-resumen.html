@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promesas, en resumen</title>
+</head>
+
+<body>
+    <script>
+        //Promesas: representan cosas que pueden estar presentes ahora, en el futuro o nunca. Son muy populares con tencologías asincronas que nos permiten lidiar con situaciones como el "Callback Hell" (dependencia de operaciones sobre el callback de otras funciones) que cuando sucede varias veces se crea una dependencia en cascada que no es para nada agradable.
+
+        let promesa = new Promise((resolve, reject) => {
+            console.log('Pendiente...');
+            
+            setTimeout(() => {
+                    resolve('promesa resuelta con exito');
+            }, 2000);
+
+            setTimeout(() => {
+                reject('la promesa ha fallado');
+            }, 3000);
+
+
+
+
+            // if(false){
+            //     resolve('la operacion fue un exito');
+            // }
+            // else{
+            //     reject('Ocurrio un error');
+            // }
+
+        });
+        // new es una palabra reservada cuando usamos el constructor de la promesa "Promise", en donde pasamos una funcion con 2 parametros, resolve (resolucion del callback), reject(fracaso del callback).
+
+        //una vez que tenemos el callback, vemos que hacer con el con .then()
+
+        promesa
+        .then((response) => {
+            
+                console.log('Response: ',response);
+        })
+        .catch((error) => {
+            console.log('Error: ',error);
+        })
+        //En el caso de que la promesa falle, usamos .catch()
+
+        // una promesa tiene 3 estados, puede estar pendiente, resuelta o puede ser rechazada.
+
+
+
+    </script>
+</body>
+
+</html>
