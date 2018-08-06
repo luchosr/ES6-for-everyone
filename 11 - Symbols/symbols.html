@@ -7,6 +7,26 @@
     <title>Symbols</title>
 </head>
 <body>
-    
+
+<script>
+    const wes = Symbol('Wes');
+    // los simbolos son absolutamente unicos y no vas a tener colision entre ellos ya que se crean de manera unica en un Hash.
+
+    const classRoom = {
+        [Symbol('Mark')] : {grade: 50, gender: 'male'},
+        [Symbol('olivia')]: {grade: 80, gender: 'female'},
+        [Symbol('olivia')]: {grade: 80, gender: 'female'}
+    };
+
+
+    for (person in classRoom){
+        console.log(person);
+    }
+
+    const syms = getOwnPropertySymbols(classRoom);
+    console.log(syms);
+
+
+</script>
 </body>
 </html>
