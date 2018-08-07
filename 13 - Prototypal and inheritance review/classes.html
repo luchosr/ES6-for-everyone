@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classes</title>
+</head>
+<body>
+    <script>
+
+        class Dog{
+
+            //toda clase obligatoriamente tiene dentro de ella un método constructor de la misma. Notese el "shorthand"
+            constructor(name, breed){
+                this.name = name;
+                this.breed = breed;
+            }
+            // a pesar de que intuitivamente pensemos de separar los metodos con coma, no hay que hacerlo en el caso de la clase.
+            bark(){
+                console.log(`Bark Bark! My name is ${this.name}`);
+            }
+            cuddle(){
+                console.log(`Bark Bark! My name is ${this.name} and I love my owner!`);
+            }
+            // los metodos asociados estáticos van a estar disponibles solo cuando se invocan desde la superclase
+            // como por ejemplo Dog.info()
+            static info(){
+                console.log('un perro es mejor que un gato(?');
+            }
+
+            // esta descripcion no actua como un metodo a llamar sino que con solo poner sunny.description te retorna la descripcion.
+
+            get description(){
+                return `${this.name} is a   ${this.breed} type of dog`;
+            }
+
+            set nicknames(value){
+                this.nick = value.trim();
+            }
+            get nicknames(){
+                return this.nick.toUpperCase();
+            }
+
+        }
+
+    
+        // en el caso de la herencia, cuando escribimos un metodo dentro de un constructor, va a ser heredado por los nuevos elementos instanciados por el constructor.
+
+        // Dog.prototype.bark = function(){
+        //     console.log(`Bark Bark! My name is ${this.name}`);
+        // }
+        const snickers = new Dog('Snickers', 'King Charles');
+        const sunny = new Dog('Sunny','Golden Doodle');
+
+        // es imporetante notar que si agregamos metodos al prototipo despues de su instanciacion, el metodo va a estar de todos modos para todas las instancias.
+        // Dog.prototype.cuddle = function(){
+        //     console.log(`Bark Bark! My name is ${this.name} and I love my owner!`);
+        // }    
+        
+    </script>
+</body>
+</html>
