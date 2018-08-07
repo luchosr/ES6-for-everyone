@@ -1,0 +1,15 @@
+{
+  "name": "js_modules",
+  "version": "1.0.0",
+  "description": "prueba de paquete de javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "slug": "^0.9.1",
+    "webpack": "^4.16.5"
+  }
+}
