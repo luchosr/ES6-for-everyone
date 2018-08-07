@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inheritance review</title>
+</head>
+<body>
+    <script>
+        function Dog(name, breed){
+            this.name = name;
+            this.breed = breed;
+        }
+        // en el caso de la herencia, cuando escribimos un metodo dentro de un constructor, va a ser heredado por los nuevos elementos instanciados por el constructor.
+
+        Dog.prototype.bark = function(){
+            console.log(`Bark Bark! My name is ${this.name}`)
+        }
+        const snickers = new Dog('Snickers', 'King Charles');
+        const sunny = new Dog('Sunny','Golden Doodle');
+
+        // es imporetante notar que si agregamos metodos al prototipo despues de su instanciacion, el metodo va a estar de todos modos para todas las instancias.
+        Dog.prototype.bark = function(){
+            console.log(`Bark Bark! My name is ${this.name} and my breed is ${this.breed}`);
+        }
+    </script>
+</body>
+</html>
